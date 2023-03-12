@@ -1,18 +1,20 @@
 class CaesarCypher():    
     
-    def __init__(self, message, key)
-        self._message = message
-        self._key = key
+    def __init__(self):
+        self
 
-    def shift(string, key):
-    return string[key:] + string[:key]
+    def shift(self, string, key):
+        return string[key:] + string[:key]
 
-    def encrypt(message, key1, key2):
-    result = ""
-    message = message.lower()
-    shifted1 = shift(alphabet, key1)
-    shifted2 = shift(alphabet, key2)
-    for i in range(len(message)):
-        index = alphabet.find(message[i])
-        result += shifted1[index] if i % 2 == 0 else shifted2[index]
-    return result
+    def encrypt(self, message, key):
+        alphabet = "abcdefghijklmnopqrstuvwxyz"
+        result = ""
+        message = message.lower()
+        shifted = self.shift(alphabet, key)
+        for i in range(len(message)):
+            if message[i] == " ":
+                result += " "
+            else:
+                index = alphabet.find(message[i])
+                result += shifted[index]
+        return result

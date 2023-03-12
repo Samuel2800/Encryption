@@ -13,3 +13,5 @@ def encrypt(message, key1, key2):
         result += shifted1[index] if i % 2 == 0 else shifted2[index]
     return result
 
+print(encrypt("estremeceme", 2, 3))
+
